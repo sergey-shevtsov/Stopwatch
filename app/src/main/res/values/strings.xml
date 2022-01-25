@@ -4,5 +4,4 @@
     <string name="stopwatch_button_start">Start</string>
     <string name="stopwatch_button_pause">Pause</string>
     <string name="stopwatch_button_stop">Stop</string>
-    <string name="fab_add_stopwatch_content_description">Add stopwatch</string>
 </resources>
