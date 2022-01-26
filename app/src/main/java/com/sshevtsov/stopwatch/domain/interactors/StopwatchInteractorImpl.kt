@@ -1,7 +1,7 @@
 package com.sshevtsov.stopwatch.domain.interactors
 
-import com.sshevtsov.stopwatch.domain.state.StopwatchListState
 import com.sshevtsov.stopwatch.domain.model.Stopwatch
+import com.sshevtsov.stopwatch.domain.state.StopwatchListState
 import kotlinx.coroutines.channels.BufferOverflow
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -21,7 +21,7 @@ class StopwatchInteractorImpl : StopwatchInteractor {
     }
 
     override suspend fun start(id: String) {
-        getStopwatchHolderById(id).let { holder ->
+        stopwatchList.getById(id).let { holder ->
             holder.start()
             holder.ticker.collect {
                 changeState()
@@ -30,16 +30,16 @@ class StopwatchInteractorImpl : StopwatchInteractor {
     }
 
     override suspend fun pause(id: String) {
-        getStopwatchHolderById(id).pause()
+        stopwatchList.getById(id).pause()
     }
 
     override suspend fun stop(id: String) {
-        getStopwatchHolderById(id).stop()
+        stopwatchList.getById(id).stop()
     }
 
     override suspend fun delete(id: String) {
         changeState {
-            stopwatchList.remove(getStopwatchHolderById(id))
+            stopwatchList.remove(stopwatchList.getById(id))
         }
     }
 
@@ -67,8 +67,8 @@ class StopwatchInteractorImpl : StopwatchInteractor {
         emitIdleState()
     }
 
-    private fun getStopwatchHolderById(id: String): StopwatchHolder =
-        stopwatchList.first { it.stopwatch.id == id }
+    private fun MutableList<StopwatchHolder>.getById(id: String): StopwatchHolder =
+        this.first { it.stopwatch.id == id }
 
     private fun MutableList<StopwatchHolder>.extract(): List<Stopwatch> =
         this.map { it.stopwatch }
