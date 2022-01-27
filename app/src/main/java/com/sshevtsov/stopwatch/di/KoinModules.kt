@@ -16,5 +16,7 @@ val application = module {
 
     single<StopwatchStateCalculator> { StopwatchStateCalculatorImpl(get(), get()) }
 
+    factory<StopwatchStateHolder> { StopwatchStateHolderImpl(get(), get(), get()) }
+
     viewModel { MainViewModel() }
 }
