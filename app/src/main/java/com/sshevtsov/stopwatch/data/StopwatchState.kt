@@ -1,4 +1,4 @@
-package com.sshevtsov.stopwatch
+package com.sshevtsov.stopwatch.data
 
 sealed class StopwatchState {
 
