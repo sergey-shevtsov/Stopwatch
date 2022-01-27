@@ -18,5 +18,5 @@ val application = module {
 
     factory<StopwatchStateHolder> { StopwatchStateHolderImpl(get(), get(), get()) }
 
-    viewModel { MainViewModel() }
+    viewModel { MainViewModel(get()) }
 }
