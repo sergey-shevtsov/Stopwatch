@@ -1,7 +1,8 @@
-package com.sshevtsov.stopwatch
+package com.sshevtsov.stopwatch.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.sshevtsov.stopwatch.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
