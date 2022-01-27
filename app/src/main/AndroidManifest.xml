@@ -3,6 +3,7 @@
     package="com.sshevtsov.stopwatch">
 
     <application
+        android:name=".application.App"
         android:allowBackup="true"
         android:fullBackupOnly="true"
         android:icon="@mipmap/ic_launcher"
