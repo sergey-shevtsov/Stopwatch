@@ -10,6 +10,8 @@ val application = module {
 
     single<TimestampProvider> { TimestampProviderImpl() }
 
+    single { TimestampMillisecondsFormatter() }
+
     single<ElapsedTimeCalculator> { ElapsedTimeCalculatorImpl(get()) }
 
     single<StopwatchStateCalculator> { StopwatchStateCalculatorImpl(get(), get()) }
