@@ -1,6 +1,7 @@
-package com.sshevtsov.stopwatch.domain
+package com.sshevtsov.stopwatch.domain.calculator
 
 import com.sshevtsov.stopwatch.data.StopwatchState
+import com.sshevtsov.stopwatch.domain.timestamp.TimestampProvider
 import kotlin.math.max
 
 class ElapsedTimeCalculatorImpl(

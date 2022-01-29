@@ -1,4 +1,4 @@
-package com.sshevtsov.stopwatch.domain
+package com.sshevtsov.stopwatch.domain.calculator
 
 import com.sshevtsov.stopwatch.data.StopwatchState
 

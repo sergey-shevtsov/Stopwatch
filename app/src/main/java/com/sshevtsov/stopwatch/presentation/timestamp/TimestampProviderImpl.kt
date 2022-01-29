@@ -1,6 +1,6 @@
-package com.sshevtsov.stopwatch.presentation
+package com.sshevtsov.stopwatch.presentation.timestamp
 
-import com.sshevtsov.stopwatch.domain.TimestampProvider
+import com.sshevtsov.stopwatch.domain.timestamp.TimestampProvider
 
 class TimestampProviderImpl : TimestampProvider {
     override fun getMilliseconds(): Long =

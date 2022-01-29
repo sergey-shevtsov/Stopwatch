@@ -1,4 +1,4 @@
-package com.sshevtsov.stopwatch.presentation
+package com.sshevtsov.stopwatch.presentation.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

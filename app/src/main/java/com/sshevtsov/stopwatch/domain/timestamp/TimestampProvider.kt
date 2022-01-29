@@ -1,4 +1,4 @@
-package com.sshevtsov.stopwatch.domain
+package com.sshevtsov.stopwatch.domain.timestamp
 
 interface TimestampProvider {
 

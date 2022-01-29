@@ -1,6 +1,9 @@
-package com.sshevtsov.stopwatch.domain
+package com.sshevtsov.stopwatch.domain.state
 
+import com.sshevtsov.stopwatch.data.StopwatchConstants.DEFAULT_ELAPSED_TIME
 import com.sshevtsov.stopwatch.data.StopwatchState
+import com.sshevtsov.stopwatch.domain.calculator.ElapsedTimeCalculator
+import com.sshevtsov.stopwatch.domain.timestamp.TimestampMillisecondsFormatter
 
 class StopwatchStateHolderImpl(
     private val timestampMillisecondsFormatter: TimestampMillisecondsFormatter,
@@ -28,9 +31,5 @@ class StopwatchStateHolderImpl(
             is StopwatchState.Running -> elapsedTimeCalculator.calculate(currentState)
         }
         return timestampMillisecondsFormatter.format(elapsedTime)
-    }
-
-    companion object {
-        private const val DEFAULT_ELAPSED_TIME = 0L
     }
 }

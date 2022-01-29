@@ -1,9 +1,9 @@
-package com.sshevtsov.stopwatch.presentation
+package com.sshevtsov.stopwatch.presentation.main
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.sshevtsov.stopwatch.data.StopwatchConstants.DEFAULT_TIME
-import com.sshevtsov.stopwatch.domain.StopwatchStateHolder
+import com.sshevtsov.stopwatch.domain.state.StopwatchStateHolder
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

@@ -1,6 +1,8 @@
-package com.sshevtsov.stopwatch.domain
+package com.sshevtsov.stopwatch.domain.state
 
 import com.sshevtsov.stopwatch.data.StopwatchState
+import com.sshevtsov.stopwatch.domain.calculator.ElapsedTimeCalculator
+import com.sshevtsov.stopwatch.domain.timestamp.TimestampProvider
 
 class StopwatchStateCalculatorImpl(
     private val timestampProvider: TimestampProvider,
